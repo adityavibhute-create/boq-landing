@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Effysinc BOQ — VRF Quotation सिर्फ़ 10 मिनट में</title>
+<meta name="description" content="HVAC contractors के लिए BOQ software. Automatic tonnage, ODU selection, accessory quantities, multi-brand pricing और branded PDF quotation. ₹999/month.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#14477d;
+    --navy-dark:#0e3259;
+    --blue:#1f7ae0;
+    --green:#0f9d58;
+    --ink:#101828;
+    --body:#475467;
+    --line:#e4e7ec;
+    --bg:#f3f6fa;
+    --white:#fff;
+    --radius:14px;
+    --max:1080px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter','Noto Sans Devanagari',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    color:var(--body);
+    background:var(--white);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+  h1,h2,h3{color:var(--ink);line-height:1.4;font-weight:800;letter-spacing:-0.01em}
+  h1{font-size:clamp(26px,5.4vw,42px)}
+  h2{font-size:clamp(22px,4.2vw,32px);margin-bottom:12px}
+  h3{font-size:18px;font-weight:700;margin-bottom:6px}
+  p{font-size:16px}
+  section{padding:56px 0}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.94);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-weight:800;font-size:19px;color:var(--navy);letter-spacing:-0.02em}
+  .logo span{color:var(--blue)}
+  .nav-cta{
+    background:var(--navy);color:#fff;text-decoration:none;
+    padding:9px 18px;border-radius:9px;font-size:14px;font-weight:600;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:linear-gradient(165deg,#0e3259 0%,#14477d 55%,#1f7ae0 100%);
+    color:#fff;padding:60px 0 64px;text-align:center;
+  }
+  .hero h1{color:#fff;margin-bottom:18px}
+  .hero .sub{font-size:clamp(16px,2.6vw,19px);color:#cfe0f5;max-width:660px;margin:0 auto 28px}
+  .pill{
+    display:inline-block;background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.26);
+    padding:6px 15px;border-radius:999px;font-size:13px;
+    font-weight:600;color:#e6f0fb;margin-bottom:20px;
+  }
+  .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{
+    display:inline-block;text-decoration:none;font-weight:700;font-size:16px;
+    padding:15px 30px;border-radius:11px;transition:transform .15s ease,box-shadow .15s ease;
+  }
+  .btn:active{transform:scale(.98)}
+  .btn-primary{background:#fff;color:var(--navy);box-shadow:0 6px 20px rgba(0,0,0,.18)}
+  .btn-wa{background:var(--green);color:#fff}
+  .btn-lg{background:var(--navy);color:#fff;box-shadow:0 6px 20px rgba(20,71,125,.28)}
+  .hero-note{margin-top:16px;font-size:14px;color:#aec8e6}
+
+  /* ---------- PROBLEM ---------- */
+  .problem{background:var(--bg)}
+  .prob-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:26px}
+  .prob-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .prob-card .x{color:#d92d20;font-size:19px;font-weight:800;margin-bottom:8px;display:block}
+
+  /* ---------- SCREENSHOTS ---------- */
+  .shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:30px}
+  .shot{
+    border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+    background:var(--bg);box-shadow:0 2px 10px rgba(16,24,40,.06);
+  }
+  .shot img{width:100%;display:block}
+  .shot .cap{padding:11px 14px;font-size:13px;font-weight:600;color:var(--ink);background:#fff;border-top:1px solid var(--line);line-height:1.5}
+  .shot-placeholder{
+    aspect-ratio:9/16;display:flex;align-items:center;justify-content:center;
+    color:#98a2b3;font-size:13px;text-align:center;padding:20px;
+    border-bottom:1px dashed var(--line);
+  }
+
+  /* ---------- FEATURES ---------- */
+  .feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:30px}
+  .feat{border:1px solid var(--line);border-radius:var(--radius);padding:22px;background:#fff}
+  .feat .ico{
+    width:40px;height:40px;border-radius:10px;background:#e8f1fc;color:var(--navy);
+    display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:12px;
+  }
+  .feat p{font-size:15px}
+
+  /* ---------- PRICING ---------- */
+  .pricing{background:var(--bg)}
+  .price-card{
+    max-width:430px;margin:28px auto 0;background:#fff;
+    border:2px solid var(--navy);border-radius:18px;padding:34px 28px;text-align:center;
+    box-shadow:0 10px 36px rgba(20,71,125,.12);
+  }
+  .amount{font-size:50px;font-weight:800;color:var(--ink);letter-spacing:-0.03em;line-height:1.1}
+  .amount small{font-size:17px;font-weight:600;color:var(--body);letter-spacing:0}
+  .trial{
+    display:inline-block;background:#e7f7ee;color:#067647;font-weight:700;
+    font-size:13px;padding:6px 14px;border-radius:999px;margin-bottom:18px;
+  }
+  .plist{list-style:none;text-align:left;margin:22px 0 26px}
+  .plist li{padding:9px 0 9px 28px;position:relative;font-size:15px;border-bottom:1px solid #f2f4f7;line-height:1.6}
+  .plist li:last-child{border-bottom:0}
+  .plist li::before{
+    content:"✓";position:absolute;left:0;top:9px;color:var(--green);font-weight:800;
+  }
+
+  /* ---------- CTA ---------- */
+  .cta{background:var(--navy-dark);color:#fff;text-align:center}
+  .cta h2{color:#fff}
+  .cta p{color:#b9d0e8;max-width:580px;margin:0 auto 26px}
+
+  /* ---------- FAQ ---------- */
+  details{
+    border:1px solid var(--line);border-radius:11px;padding:16px 18px;margin-bottom:11px;background:#fff;
+  }
+  details summary{
+    font-weight:700;color:var(--ink);cursor:pointer;list-style:none;
+    display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:16px;line-height:1.5;
+  }
+  details summary::-webkit-details-marker{display:none}
+  details summary::after{content:"+";font-size:21px;color:var(--blue);font-weight:700;flex-shrink:0}
+  details[open] summary::after{content:"–"}
+  details p{margin-top:11px;font-size:15px}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--ink);color:#98a2b3;padding:34px 0;text-align:center;font-size:14px}
+  footer strong{color:#fff;display:block;margin-bottom:5px;font-size:15px}
+  footer a{color:#90b8e8;text-decoration:none}
+
+  .center{text-align:center}
+  .lead{max-width:660px;margin:0 auto;font-size:17px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <div class="logo">Effysinc <span>BOQ</span></div>
+    <a href="#signup" class="nav-cta">Early Access</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <span class="pill">HVAC contractors ने बनाया, HVAC contractors के लिए</span>
+    <h1>VRF quotation अब 10 मिनट में।<br>दो दिन नहीं।</h1>
+    <p class="sub">
+      Floors और rooms डालिए। Tonnage, outdoor unit selection, accessory quantities,
+      pricing और branded PDF quotation — सब automatic।
+    </p>
+    <div class="btn-row">
+      <a href="#signup" class="btn btn-primary">Early Access लीजिए</a>
+      <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20मुझे%20Effysinc%20BOQ%20का%20demo%20चाहिए" class="btn btn-wa">WhatsApp पर Demo</a>
+    </div>
+    <p class="hero-note">14 दिन free trial · Card की ज़रूरत नहीं · एक call में setup</p>
+  </div>
+</header>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="wrap">
+    <h2 class="center">यह पहचाना सा लगता है?</h2>
+    <p class="lead center">हर VRF enquiry मतलब Excel में घंटों का काम — और एक गलत formula पूरा margin खा जाता है।</p>
+    <div class="prob-grid">
+      <div class="prob-card">
+        <span class="x">✕</span>
+        <h3>एक quotation = दो दिन</h3>
+        <p>Tonnage, HP matching, diversity, piping length — सब हाथ से, हर बार नए सिरे से।</p>
+      </div>
+      <div class="prob-card">
+        <span class="x">✕</span>
+        <h3>Excel sheet जो बिगड़ जाती है</h3>
+        <p>Rate column में एक copy-paste की गलती, और cost से नीचे quote चला जाता है — पता भी नहीं चलता।</p>
+      </div>
+      <div class="prob-card">
+        <span class="x">✕</span>
+        <h3>Rates कभी update नहीं होते</h3>
+        <p>पिछले साल के rate किसी पुरानी file में पड़े हैं, और याद नहीं कि current version कौन सा है।</p>
+      </div>
+      <div class="prob-card">
+        <span class="x">✕</span>
+        <h3>क्या quote किया था, record नहीं</h3>
+        <p>Client तीन महीने पुराने offer के बारे में call करता है, और file किसी को मिलती ही नहीं।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCREENSHOTS -->
+<section>
+  <div class="wrap">
+    <h2 class="center">चलते हुए देखिए</h2>
+    <p class="lead center">पूरी VRF quotation — room list से लेकर printed PDF तक।</p>
+
+    <!-- हर shot-placeholder div को इससे replace कीजिए: <img src="shot1.png" alt=""> -->
+    <div class="shots">
+      <div class="shot">
+        <div class="shot-placeholder">shot1.png<br>(Floors &amp; Rooms)</div>
+        <div class="cap">Rooms डालिए, tonnage अपने आप</div>
+      </div>
+      <div class="shot">
+        <div class="shot-placeholder">shot2.png<br>(Outdoor Units)</div>
+        <div class="cap">ODU selection, live diversity के साथ</div>
+      </div>
+      <div class="shot">
+        <div class="shot-placeholder">shot3.png<br>(Quantities)</div>
+        <div class="cap">Accessories और piping auto-calculate</div>
+      </div>
+      <div class="shot">
+        <div class="shot-placeholder">shot4.png<br>(PDF Output)</div>
+        <div class="cap">Branded, client-ready PDF quotation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="problem">
+  <div class="wrap">
+    <h2 class="center">आपको क्या मिलता है</h2>
+    <div class="feat-grid">
+      <div class="feat">
+        <div class="ico">📐</div>
+        <h3>Automatic tonnage</h3>
+        <p>Room का area डालिए, TR मिल जाएगा। IDU type चुनिए, app खुद size कर देगा।</p>
+      </div>
+      <div class="feat">
+        <div class="ico">🏢</div>
+        <h3>Floor-wise ODU selection</h3>
+        <p>Indoor HP total, 120% diversity target और actual diversity — select करते वक़्त live दिखता है।</p>
+      </div>
+      <div class="feat">
+        <div class="ico">🔧</div>
+        <h3>Accessories auto-calculate</h3>
+        <p>Refnet joints, controllers, copper piping, drain piping, insulation — IDU count से अपने आप निकल आते हैं। कोई भी value आप बदल सकते हैं।</p>
+      </div>
+      <div class="feat">
+        <div class="ico">🏷️</div>
+        <h3>Multi-brand pricing</h3>
+        <p>हर brand की अलग price list रखिए। Brand बदलिए, पूरा BOQ तुरंत re-price हो जाता है।</p>
+      </div>
+      <div class="feat">
+        <div class="ico">📈</div>
+        <h3>Margin analysis</h3>
+        <p>भेजने से पहले हर line पर base cost और selling price देखिए। Markup और discount एक ही जगह से set कीजिए।</p>
+      </div>
+      <div class="feat">
+        <div class="ico">📄</div>
+        <h3>आपका logo, आपका format</h3>
+        <p>High-side और low-side अलग, GST, grand total, आपका letterhead। Print कीजिए या PDF भेजिए।</p>
+      </div>
+      <div class="feat">
+        <div class="ico">📋</div>
+        <h3>Quotation register</h3>
+        <p>हर quote value और status के साथ logged — quoted, follow-up, negotiation, converted, lost। Excel में export।</p>
+      </div>
+      <div class="feat">
+        <div class="ico">☁️</div>
+        <h3>Cloud sync और device control</h3>
+        <p>Office desktop हो या site पर mobile, दोनों से काम। आपकी pricing कौन से device पर खुलेगी, यह आप तय करते हैं।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <h2 class="center">सीधा-सादा pricing</h2>
+    <p class="lead center">एक ही plan। सब कुछ included।</p>
+    <div class="price-card">
+      <span class="trial">14 दिन free</span>
+      <div class="amount">₹999<small>/month</small></div>
+      <ul class="plist">
+        <li>Unlimited quotations</li>
+        <li>Unlimited projects और clients</li>
+        <li>अपनी खुद की price list, पूरी private</li>
+        <li>10 machine brands तक</li>
+        <li>हर PDF पर आपकी company का logo</li>
+        <li>Multiple users और devices</li>
+        <li>Quotation register, Excel export के साथ</li>
+        <li>WhatsApp support</li>
+      </ul>
+      <a href="#signup" class="btn btn-lg" style="width:100%">Free Trial शुरू कीजिए</a>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNUP -->
+<section class="cta" id="signup">
+  <div class="wrap">
+    <h2>Early access लीजिए</h2>
+    <p>
+      अभी हम सिर्फ़ कुछ ही contractors को onboard कर रहे हैं, setup खुद करके —
+      आपकी price list हम load कर देंगे और एक call में पूरा चला कर दिखाएंगे।
+    </p>
+    <div class="btn-row">
+      <!-- अपना Tally form link यहाँ डालिए -->
+      <a href="https://tally.so/r/YOURFORM" class="btn btn-primary">Access मांगिए</a>
+      <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20मुझे%20Effysinc%20BOQ%20का%20demo%20चाहिए" class="btn btn-wa">WhatsApp कीजिए</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap" style="max-width:720px">
+    <h2 class="center" style="margin-bottom:26px">सवाल</h2>
+
+    <details open>
+      <summary>क्या दूसरे contractors मेरी prices देख सकते हैं?</summary>
+      <p>नहीं। आपकी price list, projects और clients सिर्फ़ आपको और आपके add किए हुए users को दिखते हैं। Platform पर कोई और इन्हें नहीं देख सकता।</p>
+    </details>
+
+    <details>
+      <summary>कौन से brands support होते हैं?</summary>
+      <p>जो भी आप चाहें। आप अपने brands add कीजिए, हर एक का logo upload कीजिए, और अपने rates डालिए। Quotation पर उसी brand का logo आता है।</p>
+    </details>
+
+    <details>
+      <summary>क्या सारी prices मुझे खुद डालनी पड़ेंगी?</summary>
+      <p>अपनी existing price sheet भेज दीजिए, setup के वक़्त हम load कर देंगे। उसके बाद rate बदलने पर आप खुद update करते रहिए।</p>
+    </details>
+
+    <details>
+      <summary>Mobile पर चलता है?</summary>
+      <p>हाँ। सब कुछ browser में चलता है — phone, tablet या desktop। ज़रूरत हो तो site पर बैठे ही quotation बना लीजिए।</p>
+    </details>
+
+    <details>
+      <summary>क्या सिर्फ़ VRF के लिए है?</summary>
+      <p>VRF और conventional split दोनों support होते हैं, ductable units और AHU के साथ।</p>
+    </details>
+
+    <details>
+      <summary>Free trial के बाद क्या होता है?</summary>
+      <p>हम पूछेंगे कि आगे continue करना है या नहीं। हाँ तो ₹999 per month। नहीं तो कुछ भी charge नहीं होता, और जो quotations बनाए हैं वो export कर सकते हैं।</p>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <strong>Effysinc</strong>
+    HVAC contractors के लिए software · Sangli, Maharashtra<br>
+    <a href="https://wa.me/91XXXXXXXXXX">WhatsApp</a> · <a href="mailto:YOUR@EMAIL.COM">Email</a>
+  </div>
+</footer>
+
+</body>
+</html>
